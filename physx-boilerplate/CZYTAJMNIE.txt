@@ -1,0 +1,21 @@
+Aby uruchomiæ kod wykonaj nastêpuj¹ce polecenia:
+
+[!] Pamiêtaj aby zmieniæ symbol ... na katalog, w którym rozpakowa³eœ/aœ bibliotekê PhysX.
+
+1. Pobierz bibliotekê PhysX w wersji 3.4 (https://github.com/NVIDIAGameWorks/PhysX-3.4).
+2. Skompiluj solucjê silnika za pomoc¹ Visual Studio 2015 znajduj¹c¹ siê w katalogu "...\PhysX_3.4\Source\compiler\vc14win64" (ustawienia x64 i Debug).
+3. Skompiluj solucjê tzw. `spinnet`-ów za pomoc¹ Visual Studio 2015 znajduj¹c¹ siê w katalogu "...\PhysX_3.4\Source\compiler\vc14win64" (ustawienia x64 i Debug).
+4. Dodaj œcie¿ki do nag³ówków w ustawieniach niniejszej solucji (C/C++ -> General -> Additional Include Directories):
+...\PxShared\src\foundation\include
+...\PhysX_3.4\Source\Common\src
+...\PhysX_3.4\Snippets\Graphics\include\win32\GL
+...\PhysX_3.4\Include
+...\PxShared\include
+5. Dodaj œcie¿ki do blibliotek w ustawieniach niniejszej solucji (Linker -> General -> Additional Library Directories):
+...\PxShared\lib\vc14win64
+...\PhysX_3.4\Lib\vc14win64
+...\PhysX_3.4\Snippets\Graphics\lib\win64\glut
+6. Ustaw metodê do³¹czania bibliotek na /MTd (C/C++ -> Code Genration -> Runtime Library).
+7. Skopiuj biblioteki DLL z katalogu "...\PhysX_3.4\Bin\vc14win64" do "{katalog niniejszejsolucji}\x64\Debug".
+
+Po scenie mo¿na poruszaæ siê za pomoc¹ WASD oraz myszki. Dodatkowo w pliku `labolatory-code.cpp` mo¿na zaprogramowaæ obs³ugê klawiszy.
